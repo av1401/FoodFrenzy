@@ -12,15 +12,15 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_DATABASE: springboot
-      MYSQL_USERNAME: root 
+      MYSQL_USER: root
       MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
     networks:
-      - common-networks
+      - common-network
 
-  networks:
-    common-network:
-      external: true
+networks:
+  common-network:
+    external: true
     name: common-network
